@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Employee Management System</h1>
+<ul class="list-group">
+    {% for employee in employees %}
+        <li class="list-group-item">
+            <strong>{{ employee.name }}</strong> - {{ employee.position }} ({{ employee.department }})
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
